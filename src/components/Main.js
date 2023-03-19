@@ -16,7 +16,11 @@ const Main = () => {
   return (
     <Switch>
       <Route path={["/", `/${homePage}`]} exact component={Home} />
-      <Route path={`/${aboutMePage}`} exact component={AboutMe} />
+      <Route
+        path={[`/${aboutMePage}`, `/${aboutMePage}/:hero`]}
+        exact
+        component={AboutMe}
+      />
       <Route path={`/${starWarsPage}`} exact component={StarWars} />
       <Route path={`/${contactPage}`} exact component={Contact} />
       <Route component={ErrorPage} />
